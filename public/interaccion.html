@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/jpg" href="/content/images/SRL.ico" />
+    <link rel="stylesheet" href="/content/css/index.css">
+    <link rel="stylesheet" href="/content/css/bootstrap_4_1_3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>CRM - GENESYS</title>
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }
+
+        .ui-container {
+            display: grid;
+            grid-template-columns: 5fr 3fr;
+        }
+
+        .conversation-data {
+            padding: 1rem;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .header h1 {
+            text-align: center;
+        }
+
+        .wrapup-container {
+            padding: 1rem;
+            max-width: 50%;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-column-gap: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>Llamada en curso</h1>
+        </div>
+        <div class="ui-container">
+            <div class="conversation-data">
+                <label id="contactName">Nombre: </label>
+                <label id="contactPhone">Telefono: </label>
+                <label id="contactSubBrand">Sub marca: </label>
+                <label id="contactModel">Modelo: </label>
+                <label id="contactBrand">Marca: </label>
+                <label id="contactQuote">Cotizacion: </label>
+            </div>
+            <div>
+                <div class="wrapup-container">
+                    <div class="form-group">
+                        <small>Calificar</small>
+                        <select id="wrapupSelect" class="form-control form-control-sm">
+                            <option value="">Selecciona...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <small class="text-white">.</small>
+                        <button type="button" class="btn btn-sm btn-primary" onclick="Calificar()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/jquery_3_3_1.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/scripts/popper_1_14_3.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/scripts/bootstrap_4_1_3.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/scripts/moment_2_24_0.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/interaccion.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://sdk-cdn.mypurecloud.com/javascript/40.1.0/purecloud-platform-client-v2.min.js"></script>
+</body>
+</html>
